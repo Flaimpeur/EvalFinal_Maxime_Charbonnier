@@ -14,9 +14,10 @@ void AfficheResultats(Combat tabCompe[])
     for (int i = 0; i < 3; i++)
     {
         cout << endl << "\t" << "Combat : " << tabCompe[i].GetNiveau();
-        cout << endl << "\t" << "\t" << "Boxer : " << &tabCompe[i] << " dans le coin " << tabCompe[i].GetCoinBleu();
+        cout << endl << "\t" << "\t" << "Boxer : " << tabCompe[i].GetCoinBleu() << " dans le coin Bleu.";
         cout << endl << "\t" << "\t" << "\t" << "Contre";
-        cout << endl << "\t" << "\t" << "Boxer : " << &tabCompe[i] << " dans le coin " << tabCompe[i].GetCoinRouge();
+        cout << endl << "\t" << "\t" << "Boxer : " << tabCompe[i].GetCoinRouge() << " dans le coin Rouge.";
+        cout << endl << "\t" << "\t" << "\t" << "Vainqueur : " << tabCompe[i].GetVainqueur();
     }
 }
 #pragma endregion
@@ -75,6 +76,8 @@ int main()
     tabCompet[2].SetCoinRouge(boxer_4);
 
     tabCompet[2].DesignerVainqueur("bleu");
+
+    AfficheResultats(tabCompet);
 
     cout << endl << "Les delete : " << endl;
     delete boxer_2;
