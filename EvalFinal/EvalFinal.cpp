@@ -14,10 +14,17 @@ void AfficheResultats(Combat tabCompe[])
     for (int i = 0; i < 3; i++)
     {
         cout << endl << "\t" << "Combat : " << tabCompe[i].GetNiveau();
-        cout << endl << "\t" << "\t" << "Boxer : " << tabCompe[i].GetCoinBleu() << " dans le coin Bleu.";
-        cout << endl << "\t" << "\t" << "\t" << "Contre";
-        cout << endl << "\t" << "\t" << "Boxer : " << tabCompe[i].GetCoinRouge() << " dans le coin Rouge.";
-        cout << endl << "\t" << "\t" << "\t" << "Vainqueur : " << tabCompe[i].GetVainqueur();
+        cout << endl << "\t" << "\t" << "Boxer : " << tabCompe[i].GetCoinBleu()->GetNom() << " dans le coin Bleu.";
+        cout << endl << "\t" << "\t" << "\t" << "\t" << "Contre";
+        cout << endl << "\t" << "\t" << "Boxer : " << tabCompe[i].GetCoinRouge()->GetNom() << " dans le coin Rouge.";
+        if (tabCompe[i].GetVainqueur() != nullptr)
+        {
+            cout << endl << "\t" << "\t" << "\t" << "Vainqueur : " << tabCompe[i].GetVainqueur()->GetNom();
+        }
+        else
+        {
+            cout << endl << "\t" << "\t" << "\t" << "Vainqueur : AUCUN ";
+        }
     }
 }
 #pragma endregion
