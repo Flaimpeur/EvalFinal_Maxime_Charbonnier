@@ -14,7 +14,10 @@ int main()
     boxer_2 = new Boxeur("Box_2", 78);
     cout << endl << "Creation Boxeur " << boxer_2 << " de nom " << boxer_2->GetNom() << " et de poids " << boxer_2->GetPoids() << "kg." << endl;
     
+    cout << endl << "Les delete : " << endl;
     delete boxer_2;
+
+    cout << endl << endl << "------------ FIN du programme ------------" << endl;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
