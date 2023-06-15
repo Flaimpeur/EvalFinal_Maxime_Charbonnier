@@ -20,27 +20,45 @@ namespace Boxeurs
 	}
 	void Combat::SetCoinBleu(Boxeur* boxeur)
 	{
-		if (boxeur != nullptr)
+		if (boxeur != CoinRouge)
 		{
-			this->CoinBleu = boxeur;
-			cout << endl << "Le coin bleu est attribuer a " << boxeur << endl;
+			if (boxeur != nullptr)
+			{
+				this->CoinBleu = boxeur;
+				cout << endl << "Le coin bleu est attribuer a " << boxeur << endl;
+			}
+			else
+			{
+				this->CoinBleu = nullptr;
+			}
 		}
 		else
 		{
-			this->CoinBleu = nullptr;
+			cout << endl << "Ce boxers ne peut pas être dans ce coin, il est deja dans le coin oppose." << endl;
 		}
 	}
 
 	void Combat::SetCoinRouge(Boxeur* boxeur)
 	{
-		if (boxeur != nullptr)
+		if (boxeur != CoinBleu)
 		{
-			this->CoinRouge = boxeur;
-			cout << endl << "Le coin rouge est attribuer a " << boxeur << endl;
+			if (boxeur != nullptr)
+			{
+				this->CoinRouge = boxeur;
+				cout << endl << "Le coin rouge est attribuer a " << boxeur << endl;
+			}
+			else
+			{
+				this->CoinRouge = nullptr;
+			}
 		}
 		else
 		{
-			this->CoinRouge = nullptr;
+			cout << endl << "Ce boxers ne peut pas être dans ce coin, il est deja dans le coin oppose." << endl;
 		}
+	}
+	void Combat::DesignerVainqueur(Boxeur* boxeur)
+	{
+
 	}
 }

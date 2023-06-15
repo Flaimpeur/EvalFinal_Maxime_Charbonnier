@@ -27,6 +27,7 @@ int main()
 
     cout << endl << "Affectation des Coins au Boxers." << endl;
     combat_1.SetCoinBleu(&boxer_1);
+    combat_1.SetCoinRouge(boxer_2);
 
     cout << endl << "Les delete : " << endl;
     delete boxer_2;

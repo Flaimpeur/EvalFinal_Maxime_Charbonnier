@@ -11,6 +11,7 @@ namespace Boxeurs
 		string niveau;
 		Boxeurs::Boxeur* CoinBleu = nullptr;
 		Boxeurs::Boxeur* CoinRouge = nullptr;
+		Boxeurs::Boxeur* Vainqueur = nullptr;
 	public:
 		Combat(string niveau);
 		virtual ~Combat();
@@ -19,7 +20,7 @@ namespace Boxeurs
 		Boxeur* GetCoinRouge() { return this->CoinRouge; };
 		void SetCoinBleu(Boxeur* boxeur);
 		void SetCoinRouge(Boxeur* boxeur);
-		Boxeur* GetVainqueur();
+		Boxeur* GetVainqueur() { return this->Vainqueur; };
 		void DesignerVainqueur(Boxeur* boxeur);
 	};
 }
