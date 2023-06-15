@@ -15,10 +15,10 @@ namespace Boxeurs
 		string GetNiveau();
 		Boxeur* GetCoinBleu();
 		Boxeur* GetCoinRouge();
-		void SetCoinBleu(Boxeur*);
-		void SetCoinRouge(Boxeur*);
+		void SetCoinBleu(Boxeur* boxeur);
+		void SetCoinRouge(Boxeur* boxeur);
 		Boxeur* GetVainqueur();
-		void DesignerVainqueur(Boxeur*);
+		void DesignerVainqueur(Boxeur* boxeur);
 	};
 }
 

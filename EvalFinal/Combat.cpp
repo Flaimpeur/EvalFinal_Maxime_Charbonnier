@@ -18,4 +18,16 @@ namespace Boxeurs
 	string Combat::GetNiveau() {
 		return this->niveau;
 	}
+	void Combat::SetCoinBleu(Boxeur* boxeur)
+	{
+
+	}
+	void Combat::SetCoinRouge(Boxeur* boxeur)
+	{
+
+	}
+	void Combat::DesignerVainqueur(Boxeur* boxeur)
+	{
+
+	}
 }
