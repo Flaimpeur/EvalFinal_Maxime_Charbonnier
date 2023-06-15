@@ -57,8 +57,21 @@ namespace Boxeurs
 			cout << endl << "Ce boxers ne peut pas être dans ce coin, il est deja dans le coin oppose." << endl;
 		}
 	}
-	void Combat::DesignerVainqueur(Boxeur* boxeur)
+	Boxeur* Combat::DesignerVainqueur(string couleurCoin)
 	{
-
+		if (couleurCoin == "rouge")
+		{
+			this->Vainqueur = CoinRouge;
+			cout << endl << "Le Vainqueur est : " << CoinRouge << endl;
+		}
+		else if (couleurCoin == "bleu")
+		{
+			this->Vainqueur = CoinBleu;
+			cout << endl << "Le Vainqueur est : " << CoinBleu << endl;
+		}
+		else
+		{
+			return this->Vainqueur = nullptr;
+		}
 	}
 }

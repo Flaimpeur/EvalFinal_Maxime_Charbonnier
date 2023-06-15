@@ -29,6 +29,9 @@ int main()
     combat_1.SetCoinBleu(&boxer_1);
     combat_1.SetCoinRouge(boxer_2);
 
+    combat_1.DesignerVainqueur("bleu");
+    
+
     cout << endl << "Les delete : " << endl;
     delete boxer_2;
 

@@ -21,7 +21,7 @@ namespace Boxeurs
 		void SetCoinBleu(Boxeur* boxeur);
 		void SetCoinRouge(Boxeur* boxeur);
 		Boxeur* GetVainqueur() { return this->Vainqueur; };
-		void DesignerVainqueur(Boxeur* boxeur);
+		Boxeur* DesignerVainqueur(string couleurCoin);
 	};
 }
 
