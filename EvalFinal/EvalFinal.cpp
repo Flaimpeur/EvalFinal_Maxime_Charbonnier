@@ -25,6 +25,9 @@ int main()
     Combat combat_1("Comb_1_1/8");
     cout << endl << "Creation Combat " << &combat_1 << " niveau " << combat_1.GetNiveau() << endl;
 
+    cout << endl << "Affectation des Coins au Boxers." << endl;
+    combat_1.SetCoinBleu(&boxer_1);
+
     cout << endl << "Les delete : " << endl;
     delete boxer_2;
 
