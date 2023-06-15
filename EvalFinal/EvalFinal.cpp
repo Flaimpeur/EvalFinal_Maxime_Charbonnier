@@ -2,18 +2,29 @@
 //
 #include "Boxeur.h"
 #include <iostream>
+#include "Combat.h"
 using namespace std;
 using namespace Boxeurs;
 
+
 int main()
 {
-    Boxeur boxer_1("Box_1", 75);
+    double monPoids;
+
+    cout << endl << "Indiquer votre Poids : ";
+    cin >> monPoids;
+    Boxeur boxer_1("Box_1", monPoids);
     cout << endl << "Creation Boxeur " << &boxer_1 << " de nom " << boxer_1.GetNom() << " et de poids " << boxer_1.GetPoids() << "kg." << endl;
 
+    cout << endl << "Indiquer votre Poids : ";
+    cin >> monPoids;
     Boxeur* boxer_2;
     boxer_2 = new Boxeur("Box_2", 78);
     cout << endl << "Creation Boxeur " << boxer_2 << " de nom " << boxer_2->GetNom() << " et de poids " << boxer_2->GetPoids() << "kg." << endl;
     
+    Combat combat_1("Comb_1_1/8");
+    cout << endl << "Creation Combat " << &combat_1 << " niveau " << combat_1.GetNiveau() << endl;
+
     cout << endl << "Les delete : " << endl;
     delete boxer_2;
 

@@ -30,11 +30,6 @@ namespace Boxeurs
 
 	void Boxeur::SetPoids(double monPoids)
 	{
-		cout << endl << "Indiquer votre Poids : ";
-		cin >> monPoids;
-		if (monPoids != this->poids)
-		{
-			this->poids = monPoids;
-		}
+		this->poids = monPoids;
 	}
 }
