@@ -1,9 +1,23 @@
 #include "Boxeur.h"
 #include <string>
+#include <iostream>
+
 using namespace std;
 
 namespace Boxeurs
 {
+	Boxeur::Boxeur(string nom, double poids)
+	{
+		this->nom = nom;
+		this->poids = poids;
+		SetPoids(poids);
+	}
+
+	Boxeur::~Boxeur()
+	{
+		cout << "----> Destruction du Boxeur(" << this->nom << "): " << this << endl;
+	}
+
 	string Boxeur::GetNom()
 	{
 		return this->nom;
@@ -14,9 +28,13 @@ namespace Boxeurs
 		return this->poids;
 	}
 
-	double Boxeur::SetPoids(double monPoids)
+	void Boxeur::SetPoids(double monPoids)
 	{
-		
-		return monPoids;
+		cout << endl << "Indiquer votre Poids : ";
+		cin >> monPoids;
+		if (monPoids != this->poids)
+		{
+			this->poids = monPoids;
+		}
 	}
 }

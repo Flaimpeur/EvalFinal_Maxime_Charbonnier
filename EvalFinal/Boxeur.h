@@ -11,9 +11,9 @@ namespace Boxeurs
 		double poids;
 	public:
 		Boxeur(string nom, double poids);
-		virtual ~Boxeur();
+		~Boxeur();
 		string GetNom();
-		double SetPoids(double monPoids);
+		void SetPoids(double monPoids);
 		double GetPoids();
 	};
 }

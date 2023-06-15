@@ -1,14 +1,20 @@
 // EvalFinal.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
 //
-
+#include "Boxeur.h"
 #include <iostream>
 using namespace std;
-
+using namespace Boxeurs;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Boxeur boxer_1("Box_1", 75);
+    cout << endl << "Creation Boxeur " << &boxer_1 << " de nom " << boxer_1.GetNom() << " et de poids " << boxer_1.GetPoids() << "kg." << endl;
 
+    Boxeur* boxer_2;
+    boxer_2 = new Boxeur("Box_2", 78);
+    cout << endl << "Creation Boxeur " << boxer_2 << " de nom " << boxer_2->GetNom() << " et de poids " << boxer_2->GetPoids() << "kg." << endl;
+    
+    delete boxer_2;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
