@@ -62,12 +62,12 @@ namespace Boxeurs
 		if (couleurCoin == "rouge")
 		{
 			this->Vainqueur = CoinRouge;
-			cout << endl << "Le Vainqueur est : " << CoinRouge << endl;
+			cout << endl << endl << "Le Vainqueur est : " << CoinRouge << endl;
 		}
 		else if (couleurCoin == "bleu")
 		{
 			this->Vainqueur = CoinBleu;
-			cout << endl << "Le Vainqueur est : " << CoinBleu << endl;
+			cout << endl << endl << "Le Vainqueur est : " << CoinBleu << endl;
 		}
 		else
 		{

@@ -7,6 +7,20 @@ using namespace std;
 using namespace Boxeurs;
 
 
+#pragma region Fonctions
+void AfficheResultats(Combat tabCompe[])
+{
+    cout << endl << endl << "Recapitulatif de la competition :";
+    for (int i = 0; i < 3; i++)
+    {
+        cout << endl << "\t" << "Combat : " << tabCompe[i].GetNiveau();
+        cout << endl << "\t" << "\t" << "Boxer : " << &tabCompe[i] << " dans le coin " << tabCompe[i].GetCoinBleu();
+        cout << endl << "\t" << "\t" << "\t" << "Contre";
+        cout << endl << "\t" << "\t" << "Boxer : " << &tabCompe[i] << " dans le coin " << tabCompe[i].GetCoinRouge();
+    }
+}
+#pragma endregion
+
 int main()
 {
     double monPoids;
@@ -19,21 +33,52 @@ int main()
     cout << endl << "Indiquer votre Poids : ";
     cin >> monPoids;
     Boxeur* boxer_2;
-    boxer_2 = new Boxeur("Box_2", 78);
+    boxer_2 = new Boxeur("Box_2", monPoids);
     cout << endl << "Creation Boxeur " << boxer_2 << " de nom " << boxer_2->GetNom() << " et de poids " << boxer_2->GetPoids() << "kg." << endl;
     
-    Combat combat_1("Comb_1_1/8");
+    cout << endl << "Indiquer votre Poids : ";
+    monPoids = 80;
+    Boxeur boxer_3("Box_3", monPoids);
+    cout << endl << "Creation Boxeur " << &boxer_3 << " de nom " << boxer_3.GetNom() << " et de poids " << boxer_3.GetPoids() << "kg." << endl;
+
+    cout << endl << "Indiquer votre Poids : ";
+    monPoids = 70;
+    Boxeur* boxer_4;
+    boxer_4 = new Boxeur("Box_4", monPoids);
+    cout << endl << "Creation Boxeur " << boxer_4 << " de nom " << boxer_4->GetNom() << " et de poids " << boxer_4->GetPoids() << "kg." << endl;
+
+    Combat combat_1("Comb_1_1/2");
     cout << endl << "Creation Combat " << &combat_1 << " niveau " << combat_1.GetNiveau() << endl;
 
-    cout << endl << "Affectation des Coins au Boxers." << endl;
-    combat_1.SetCoinBleu(&boxer_1);
-    combat_1.SetCoinRouge(boxer_2);
+    Combat combat_2("Comb_2_1/2");
+    cout << endl << "Creation Combat " << &combat_2 << " niveau " << combat_2.GetNiveau() << endl;
 
-    combat_1.DesignerVainqueur("bleu");
-    
+    Combat combat_3("Comb_1_Final");
+    cout << endl << "Creation Combat " << &combat_3 << " niveau " << combat_3.GetNiveau() << endl;
+
+    Combat tabCompet[3] = {combat_1, combat_2, combat_3};
+
+    cout << endl << "Affectation des Coins du premier combat au Boxers." << endl;
+    tabCompet[0].SetCoinBleu(&boxer_1);
+    tabCompet[0].SetCoinRouge(&boxer_3);
+
+    tabCompet[0].DesignerVainqueur("bleu");
+
+    cout << endl << endl << "Affectation des Coins du deuxieme combat au Boxers." << endl;
+    tabCompet[1].SetCoinBleu(boxer_2);
+    tabCompet[1].SetCoinRouge(boxer_4);
+
+    tabCompet[1].DesignerVainqueur("rouge");
+
+    cout << endl << endl << "Affectation des Coins de la final au Boxers." << endl;
+    tabCompet[2].SetCoinBleu(&boxer_1);
+    tabCompet[2].SetCoinRouge(boxer_4);
+
+    tabCompet[2].DesignerVainqueur("bleu");
 
     cout << endl << "Les delete : " << endl;
     delete boxer_2;
+    delete boxer_4;
 
     cout << endl << endl << "------------ FIN du programme ------------" << endl;
 }
